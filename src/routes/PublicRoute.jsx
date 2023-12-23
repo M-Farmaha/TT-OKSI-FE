@@ -5,7 +5,7 @@ import { getToken } from "../redux/selectors";
 const PublicRoute = ({ children }) => {
   const token = useSelector(getToken);
 
-  return !token ? children : <Navigate to="/deals" />;
+  return !token ? children : <Navigate to="/tests" />;
 };
 
 export default PublicRoute;

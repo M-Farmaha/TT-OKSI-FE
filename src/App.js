@@ -4,7 +4,7 @@ import { lazy, Suspense } from "react";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
 
 import PublicRoute from "./routes/PublicRoute";
-// import PrivateRoute from "./routes/PrivateRoute";
+import PrivateRoute from "./routes/PrivateRoute";
 
 const AuthPage = lazy(() => import("./pages/AuthPage/AuthPage.jsx"));
 const TestPage = lazy(() => import("./pages/TestPage/TestPage.jsx"));
@@ -25,13 +25,13 @@ export const App = () => {
         />
 
         <Route
-          path="/test"
+          path="/tests"
           element={
-            <PublicRoute>
+            <PrivateRoute>
               <Suspense fallback={<div>Loading...</div>}>
                 <TestPage />
               </Suspense>
-            </PublicRoute>
+            </PrivateRoute>
           }
         />
 

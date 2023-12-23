@@ -11,7 +11,7 @@ import {
 import { ButtonLoader } from "../Loaders/Loaders";
 import { useDispatch } from "react-redux";
 import { useLoginUserMutation } from "../../redux/authApi";
-import { setToken } from "../../redux/slice";
+import { setProgress, setToken } from "../../redux/slice";
 import { Button } from "components/Button/Button";
 
 export const LoginForm = () => {
@@ -27,7 +27,11 @@ export const LoginForm = () => {
     e.preventDefault();
     setisLoading(true);
     try {
-      const { token } = await loginUser({ nickname, password }).unwrap();
+      const { token, user } = await loginUser({
+        nickname,
+        password,
+      }).unwrap();
+      dispatch(setProgress(user.progress));
       dispatch(setToken(token));
     } catch (error) {
       alert(error.data.message);
