@@ -2,12 +2,11 @@
   --main-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 
   --primary-color: #0049b8;
-  --accent-color: #70e3e1;
 
   --primary-white-color: #ffffff;
   --secondary-white-color: #ecefff;
 
-  --primary-black-color: #000000;
+  --primary-black-color: #1c224a;
 
   --border-input-style: #9fb0fe;
 }

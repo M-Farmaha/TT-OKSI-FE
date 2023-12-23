@@ -1,6 +1,6 @@
 import { ErrorSubTitle, ErrorTitle, ErrorWrap } from "./ErrorPage-styled";
 
-export const ErrorPage = () => {
+const ErrorPage = () => {
   return (
     <ErrorWrap>
       <ErrorTitle>Error 404</ErrorTitle>
@@ -8,3 +8,5 @@ export const ErrorPage = () => {
     </ErrorWrap>
   );
 };
+
+export default ErrorPage;

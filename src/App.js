@@ -1,14 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
-
 import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
 import { PageLoader } from "components/Loaders/Loaders";
 
 const AuthPage = lazy(() => import("./pages/AuthPage/AuthPage.jsx"));
 const TestPage = lazy(() => import("./pages/TestPage/TestPage.jsx"));
+const ErrorPage = lazy(() => import("./pages/ErrorPage/ErrorPage.jsx"));
 
 export const App = () => {
   return (

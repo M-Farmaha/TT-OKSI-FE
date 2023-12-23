@@ -6,35 +6,27 @@ import {
   RadioInput,
   RadioLabel,
 } from "./TestForm-styled";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getToken } from "redux/selectors";
 import { useSelector } from "react-redux";
 import {
   useUpdateUserProgressMutation,
-  useGetTestByOrderQuery,
-  useGetCurrentUserQuery,
+  useUpdateUserCorrectAnswersMutation,
+  useUpdateTestStatusMutation,
 } from "redux/Api";
-import { ButtonLoader, TestLoader } from "components/Loaders/Loaders";
+import { ButtonLoader } from "components/Loaders/Loaders";
 
-export const TestForm = () => {
+export const TestForm = ({ test, setTest, isLastQuestion, user }) => {
+  const { order, text, options } = test;
+  const { progress, correct } = user;
   const [selectedOption, setSelectedOption] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [progress, setProgress] = useState(1);
-  const [test, setTest] = useState(null);
 
   const token = useSelector(getToken);
 
-  const { data: currentUser } = useGetCurrentUserQuery(token);
-  const { data: currentTest } = useGetTestByOrderQuery({ token, progress });
   const [updateUserProgress] = useUpdateUserProgressMutation();
-
-  useEffect(() => {
-    if (currentUser) setProgress(currentUser.progress);
-  }, [currentUser]);
-
-  useEffect(() => {
-    if (currentTest) setTest(currentTest);
-  }, [currentTest]);
+  const [updateUserCorrectAnswers] = useUpdateUserCorrectAnswersMutation();
+  const [updateStatus] = useUpdateTestStatusMutation();
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
@@ -43,24 +35,39 @@ export const TestForm = () => {
   const handleButtonClick = async () => {
     setIsLoading(true);
     try {
-      await updateUserProgress(token);
+      if (selectedOption === test.answer) {
+        await updateUserCorrectAnswers({
+          token,
+          body: { correct: correct + 1 },
+        });
+      }
+      if (isLastQuestion) {
+        await updateStatus({
+          token,
+          body: { status: true },
+        });
+      } else {
+        await updateUserProgress({
+          token,
+          body: { progress: progress + 1 },
+        });
+      }
     } catch (error) {
       alert(error);
     }
-    setIsLoading(false);
+    setSelectedOption(null);
     setTest(null);
+    setIsLoading(false);
   };
 
-  return !test ? (
-    <TestLoader />
-  ) : (
+  return (
     <>
       <QuestionTitle>
-        {currentTest.order}. {currentTest.text}
+        {order}. {text}
       </QuestionTitle>
 
       <FormContainer>
-        {currentTest.options.map((option, index) => (
+        {options?.map((option, index) => (
           <RadioContainer key={index}>
             <RadioInput
               type="radio"
@@ -80,7 +87,15 @@ export const TestForm = () => {
           type="button"
           disabled={isLoading || !selectedOption}
         >
-          {!isLoading ? "Next" : <ButtonLoader />}
+          {!isLoading ? (
+            isLastQuestion ? (
+              "Finish test"
+            ) : (
+              "Next"
+            )
+          ) : (
+            <ButtonLoader />
+          )}
         </Button>
       </FormContainer>
     </>

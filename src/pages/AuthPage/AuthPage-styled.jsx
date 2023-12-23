@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: var(--secondary-black-color);
+  color: var(--primary-black-color);
   font-family: Merriweather;
   font-size: 21px;
   font-style: normal;
@@ -24,6 +24,6 @@ export const Title = styled.h1`
   text-align: center;
 
   @media (max-width: 400px) {
-    width: calc(100vw - 50px)
+    width: calc(100vw - 50px);
   }
 `;

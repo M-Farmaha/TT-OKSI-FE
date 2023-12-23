@@ -64,8 +64,8 @@ export const LoginForm = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           id={"password"}
-          title="Min 6, max 20 latin letters and figures"
-          pattern="^[a-zA-Z0-9]{6,20}$"
+          title="Min 4, max 20 latin letters and figures"
+          pattern="^[a-zA-Z0-9]{4,20}$"
           required
           autoComplete="off"
         />

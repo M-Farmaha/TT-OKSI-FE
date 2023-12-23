@@ -25,7 +25,6 @@ export const LogoutButtonLoader = () => {
   );
 };
 
-
 export const PageLoader = () => {
   return (
     <PageLoaderWrapper>
@@ -33,7 +32,7 @@ export const PageLoader = () => {
         strokeColor="var(--primary-color)"
         strokeWidth="5"
         animationDuration="0.75"
-        width="100"
+        width="75"
         visible={true}
       />
     </PageLoaderWrapper>
@@ -42,12 +41,12 @@ export const PageLoader = () => {
 
 export const TestLoader = () => {
   return (
-      <RotatingLines
-        strokeColor="var(--primary-color)"
-        strokeWidth="5"
-        animationDuration="0.75"
-        width="100"
-        visible={true}
-      />
+    <RotatingLines
+      strokeColor="var(--primary-color)"
+      strokeWidth="5"
+      animationDuration="0.75"
+      width="75"
+      visible={true}
+    />
   );
 };

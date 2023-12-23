@@ -36,9 +36,34 @@ export const Api = createApi({
     }),
 
     updateUserProgress: builder.mutation({
-      query: (token) => ({
+      query: ({ token, body }) => ({
         url: "/auth/progress",
         method: "PATCH",
+        body,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }),
+      invalidatesTags: ["User"],
+    }),
+
+    updateUserCorrectAnswers: builder.mutation({
+      query: ({ token, body }) => ({
+        url: "/auth/correct",
+        method: "PATCH",
+        body,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }),
+      invalidatesTags: ["User"],
+    }),
+
+    updateTestStatus: builder.mutation({
+      query: ({ token, body }) => ({
+        url: "/auth/status",
+        method: "PATCH",
+        body,
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -54,6 +79,15 @@ export const Api = createApi({
         },
       }),
     }),
+
+    getTestLength: builder.query({
+      query: (token) => ({
+        url: `/tests`,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }),
+    }),
   }),
 });
 
@@ -62,5 +96,8 @@ export const {
   useLogoutUserMutation,
   useGetCurrentUserQuery,
   useUpdateUserProgressMutation,
+  useUpdateUserCorrectAnswersMutation,
   useGetTestByOrderQuery,
+  useGetTestLengthQuery,
+  useUpdateTestStatusMutation,
 } = Api;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const QuestionTitle = styled.p`
+  user-select: none;
   color: var(--primary-color);
   font-family: Merriweather;
   font-size: 16px;
@@ -19,6 +20,8 @@ export const QuestionTitle = styled.p`
 `;
 
 export const FormContainer = styled.form`
+  word-break: break-word;
+  user-select: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -72,7 +75,7 @@ export const RadioInput = styled.input`
   border-radius: 50%;
   outline: none;
 
-    &:disabled {
+  &:disabled {
     cursor: default;
     opacity: 0.5;
   }
@@ -91,6 +94,4 @@ export const RadioInput = styled.input`
       color: var(--primary-color);
     }
   }
-
-
 `;

@@ -16,15 +16,15 @@ export const ButtonComponent = styled.button`
 
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-  background: linear-gradient(140.37deg,#0049b8 17.28%,#70e3e1 94.89%);
-  box-shadow: 0 4px 10px rgba(0,0,0,.25);
+  background: linear-gradient(140.37deg, #0049b8 17.28%, #70e3e1 94.89%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   border: none;
 
   transition: var(--main-transition);
 
   &:hover {
-    background: linear-gradient(140.37deg,#70e3e1 17.28%,#0049b8 94.89%);
+    background: linear-gradient(140.37deg, #70e3e1 17.28%, #0049b8 94.89%);
     cursor: pointer;
     outline: none;
 
@@ -33,7 +33,7 @@ export const ButtonComponent = styled.button`
   &:disabled {
     cursor: default;
     opacity: 0.5;
-    background: linear-gradient(140.37deg,#0049b8 17.28%,#70e3e1 94.89%);
+    background: linear-gradient(140.37deg, #0049b8 17.28%, #70e3e1 94.89%);
   }
 `;
 
@@ -41,7 +41,7 @@ export const LogoutButtonComponent = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   margin-bottom: 20px;
 
   width: 100%;

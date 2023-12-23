@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 export const Form = styled.form`
+  word-break: break-word;
   display: flex;
   flex-direction: column;
 
@@ -11,7 +12,7 @@ export const Form = styled.form`
   margin-bottom: 10px;
 
   @media (max-width: 400px) {
-    width: calc(100vw - 50px)
+    width: calc(100vw - 50px);
   }
 `;
 
@@ -97,4 +98,3 @@ export const HidePasswordIcon = styled(AiFillEyeInvisible)`
   width: 20px;
   height: 20px;
 `;
-
