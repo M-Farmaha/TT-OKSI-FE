@@ -30,12 +30,24 @@ export const PageLoader = () => {
   return (
     <PageLoaderWrapper>
       <RotatingLines
-        strokeColor="var(--accent-color)"
+        strokeColor="var(--primary-color)"
         strokeWidth="5"
         animationDuration="0.75"
-        width="99"
+        width="100"
         visible={true}
       />
     </PageLoaderWrapper>
+  );
+};
+
+export const TestLoader = () => {
+  return (
+      <RotatingLines
+        strokeColor="var(--primary-color)"
+        strokeWidth="5"
+        animationDuration="0.75"
+        width="100"
+        visible={true}
+      />
   );
 };

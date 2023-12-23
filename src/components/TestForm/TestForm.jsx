@@ -6,64 +6,83 @@ import {
   RadioInput,
   RadioLabel,
 } from "./TestForm-styled";
-import { useState } from "react";
-import { getProgress, getToken } from "redux/selectors";
-import { useDispatch, useSelector } from "react-redux";
-import { useGetTestByOrderQuery } from "redux/testsApi";
-import { setProgress } from "redux/slice";
+import { useEffect, useState } from "react";
+import { getToken } from "redux/selectors";
+import { useSelector } from "react-redux";
+import {
+  useUpdateUserProgressMutation,
+  useGetTestByOrderQuery,
+  useGetCurrentUserQuery,
+} from "redux/Api";
+import { ButtonLoader, TestLoader } from "components/Loaders/Loaders";
 
 export const TestForm = () => {
-  const [isLoading, setisLoading] = useState(false);
-  const progress = useSelector(getProgress);
-  const token = useSelector(getToken);
-  const dispatch = useDispatch();
-  const { data } = useGetTestByOrderQuery({ token, progress });
   const [selectedOption, setSelectedOption] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [progress, setProgress] = useState(1);
+  const [test, setTest] = useState(null);
+
+  const token = useSelector(getToken);
+
+  const { data: currentUser } = useGetCurrentUserQuery(token);
+  const { data: currentTest } = useGetTestByOrderQuery({ token, progress });
+  const [updateUserProgress] = useUpdateUserProgressMutation();
+
+  useEffect(() => {
+    if (currentUser) setProgress(currentUser.progress);
+  }, [currentUser]);
+
+  useEffect(() => {
+    if (currentTest) setTest(currentTest);
+  }, [currentTest]);
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
   };
 
-  const handleButtonClick = () => {
-    setisLoading(true);
+  const handleButtonClick = async () => {
+    setIsLoading(true);
     try {
-      dispatch(setProgress(progress + 1));
+      await updateUserProgress(token);
     } catch (error) {
       alert(error);
     }
-    setisLoading(false);
+    setIsLoading(false);
+    setTest(null);
   };
 
-  return (
-    data && (
-      <>
-        <QuestionTitle>
-          {data.order}. {data.text}
-        </QuestionTitle>
+  return !test ? (
+    <TestLoader />
+  ) : (
+    <>
+      <QuestionTitle>
+        {currentTest.order}. {currentTest.text}
+      </QuestionTitle>
 
-        <FormContainer>
-          {data.options.map((option, index) => (
-            <RadioContainer key={index}>
-              <RadioInput
-                type="radio"
-                id={index}
-                name="options"
-                value={option}
-                onChange={handleOptionChange}
-              />
-              <RadioLabel htmlFor={index}>{option}</RadioLabel>
-            </RadioContainer>
-          ))}
+      <FormContainer>
+        {currentTest.options.map((option, index) => (
+          <RadioContainer key={index}>
+            <RadioInput
+              type="radio"
+              id={index}
+              name="options"
+              value={option}
+              checked={selectedOption === option}
+              onChange={handleOptionChange}
+              disabled={isLoading}
+            />
+            <RadioLabel htmlFor={index}>{option}</RadioLabel>
+          </RadioContainer>
+        ))}
 
-          <Button
-            onClick={handleButtonClick}
-            type="button"
-            disabled={!selectedOption}
-          >
-            Next
-          </Button>
-        </FormContainer>
-      </>
-    )
+        <Button
+          onClick={handleButtonClick}
+          type="button"
+          disabled={isLoading || !selectedOption}
+        >
+          {!isLoading ? "Next" : <ButtonLoader />}
+        </Button>
+      </FormContainer>
+    </>
   );
 };

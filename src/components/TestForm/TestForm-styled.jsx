@@ -42,12 +42,12 @@ export const FormContainer = styled.form`
 export const RadioContainer = styled.div`
   width: 100%;
   display: flex;
-  gap: 10px;
   align-items: center;
 `;
 
 export const RadioLabel = styled.label`
   flex-grow: 1;
+  padding-left: 10px;
   color: var(--border-input-style);
 
   font-family: Merriweather;
@@ -72,6 +72,11 @@ export const RadioInput = styled.input`
   border-radius: 50%;
   outline: none;
 
+    &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
   &:hover,
   &:focus,
   &:checked {
@@ -86,4 +91,6 @@ export const RadioInput = styled.input`
       color: var(--primary-color);
     }
   }
+
+
 `;

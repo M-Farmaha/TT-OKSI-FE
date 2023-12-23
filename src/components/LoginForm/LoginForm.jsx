@@ -10,8 +10,8 @@ import {
 } from "./LoginForm-styled";
 import { ButtonLoader } from "../Loaders/Loaders";
 import { useDispatch } from "react-redux";
-import { useLoginUserMutation } from "../../redux/authApi";
-import { setProgress, setToken } from "../../redux/slice";
+import { useLoginUserMutation } from "../../redux/Api";
+import { setToken } from "../../redux/slice";
 import { Button } from "components/Button/Button";
 
 export const LoginForm = () => {
@@ -27,11 +27,10 @@ export const LoginForm = () => {
     e.preventDefault();
     setisLoading(true);
     try {
-      const { token, user } = await loginUser({
+      const { token } = await loginUser({
         nickname,
         password,
       }).unwrap();
-      dispatch(setProgress(user.progress));
       dispatch(setToken(token));
     } catch (error) {
       alert(error.data.message);

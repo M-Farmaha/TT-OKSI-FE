@@ -5,6 +5,7 @@ import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
 
 import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
+import { PageLoader } from "components/Loaders/Loaders";
 
 const AuthPage = lazy(() => import("./pages/AuthPage/AuthPage.jsx"));
 const TestPage = lazy(() => import("./pages/TestPage/TestPage.jsx"));
@@ -17,7 +18,7 @@ export const App = () => {
           path="/auth"
           element={
             <PublicRoute>
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<PageLoader />}>
                 <AuthPage />
               </Suspense>
             </PublicRoute>
@@ -28,7 +29,7 @@ export const App = () => {
           path="/tests"
           element={
             <PrivateRoute>
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<PageLoader />}>
                 <TestPage />
               </Suspense>
             </PrivateRoute>

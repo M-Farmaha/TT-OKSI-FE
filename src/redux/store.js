@@ -1,7 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { isLoadingReducer, progressReducer, tokenReducer } from "./slice";
-import { testsApi } from "./testsApi";
-import { authApi } from "./authApi";
+import { isLoadingReducer, tokenReducer } from "./slice";
+import { Api } from "./Api";
 
 import {
   persistReducer,
@@ -18,16 +17,14 @@ import persistStore from "redux-persist/es/persistStore";
 
 const reducer = combineReducers({
   token: tokenReducer,
-  progress: progressReducer,
   isLoading: isLoadingReducer,
-  [testsApi.reducerPath]: testsApi.reducer,
-  [authApi.reducerPath]: authApi.reducer,
+  [Api.reducerPath]: Api.reducer,
 });
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["token", "progress", "isLoading"],
+  whitelist: ["token", "isLoading"],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducer);
@@ -40,8 +37,7 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-    testsApi.middleware,
-    authApi.middleware,
+    Api.middleware,
   ],
 });
 

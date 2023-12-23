@@ -4,9 +4,9 @@ import { TestForm } from "components/TestForm/TestForm";
 import { LogoutButtonLoader } from "components/Loaders/Loaders";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setProgress, setToken } from "redux/slice";
+import { setToken } from "redux/slice";
 import { getToken } from "redux/selectors";
-import { useLogoutUserMutation } from "redux/authApi";
+import { useLogoutUserMutation } from "redux/Api";
 
 const TestPage = () => {
   const [isLoading, setisLoading] = useState(false);
@@ -18,7 +18,6 @@ const TestPage = () => {
     setisLoading(true);
     try {
       await logoutUser(token);
-      dispatch(setProgress(null));
       dispatch(setToken(null));
     } catch (error) {
       alert(error);
