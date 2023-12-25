@@ -7,6 +7,7 @@ import {
   SecureButton,
   HidePasswordIcon,
   ShowPasswordIcon,
+  WarningText,
 } from "./LoginForm-styled";
 import { ButtonLoader } from "../Loaders/Loaders";
 import { useDispatch } from "react-redux";
@@ -81,6 +82,13 @@ export const LoginForm = () => {
       <Button type="submit" disabled={isLoading || !nickname || !password}>
         {!isLoading ? "Start the test" : <ButtonLoader />}
       </Button>
+
+      {isLoading && (
+        <WarningText>
+          The first load may take more time accordint to server's cold start.
+          Please wait a little...
+        </WarningText>
+      )}
     </Form>
   );
 };

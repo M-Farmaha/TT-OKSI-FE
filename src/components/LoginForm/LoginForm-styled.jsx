@@ -89,6 +89,19 @@ export const SecureButton = styled.button`
   }
 `;
 
+export const WarningText = styled.p`
+  color: var(--primary-color);
+
+  font-family: Merriweather;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43;
+
+  text-align: center;
+  margin-top: 5px;
+`;
+
 export const ShowPasswordIcon = styled(AiFillEye)`
   width: 20px;
   height: 20px;
