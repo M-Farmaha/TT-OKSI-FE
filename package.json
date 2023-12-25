@@ -2,7 +2,7 @@
   "name": "tt-oksi-fe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://M-Farmaha.github.io/tt-oksi-fe/auth",
+  "homepage": "https://M-Farmaha.github.io/tt-oksi-fe",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "axios": "^1.5.1",
