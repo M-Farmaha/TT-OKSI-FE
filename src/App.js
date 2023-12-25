@@ -35,7 +35,16 @@ export const App = () => {
           }
         />
 
-        <Route path="*" element={<ErrorPage />} />
+        <Route
+          path="*"
+          element={
+            <PublicRoute>
+              <Suspense fallback={<PageLoader />}>
+                <ErrorPage />
+              </Suspense>
+            </PublicRoute>
+          }
+        />
       </Routes>
     </>
   );
