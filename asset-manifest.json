@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TT-OKSI-FE/auth/static/css/main.eb058d8e.css",
-    "main.js": "/TT-OKSI-FE/auth/static/js/main.6ab8db92.js",
+    "main.js": "/TT-OKSI-FE/auth/static/js/main.b57410c4.js",
     "static/js/703.63e51ecc.chunk.js": "/TT-OKSI-FE/auth/static/js/703.63e51ecc.chunk.js",
     "static/js/272.f96ef1b3.chunk.js": "/TT-OKSI-FE/auth/static/js/272.f96ef1b3.chunk.js",
     "static/js/207.70442a77.chunk.js": "/TT-OKSI-FE/auth/static/js/207.70442a77.chunk.js",
     "static/js/719.8ef69f13.chunk.js": "/TT-OKSI-FE/auth/static/js/719.8ef69f13.chunk.js",
     "index.html": "/TT-OKSI-FE/auth/index.html",
     "main.eb058d8e.css.map": "/TT-OKSI-FE/auth/static/css/main.eb058d8e.css.map",
-    "main.6ab8db92.js.map": "/TT-OKSI-FE/auth/static/js/main.6ab8db92.js.map",
+    "main.b57410c4.js.map": "/TT-OKSI-FE/auth/static/js/main.b57410c4.js.map",
     "703.63e51ecc.chunk.js.map": "/TT-OKSI-FE/auth/static/js/703.63e51ecc.chunk.js.map",
     "272.f96ef1b3.chunk.js.map": "/TT-OKSI-FE/auth/static/js/272.f96ef1b3.chunk.js.map",
     "207.70442a77.chunk.js.map": "/TT-OKSI-FE/auth/static/js/207.70442a77.chunk.js.map",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.eb058d8e.css",
-    "static/js/main.6ab8db92.js"
+    "static/js/main.b57410c4.js"
   ]
 }
