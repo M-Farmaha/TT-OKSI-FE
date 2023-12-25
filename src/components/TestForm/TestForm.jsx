@@ -17,8 +17,8 @@ import {
 import { ButtonLoader } from "components/Loaders/Loaders";
 
 export const TestForm = ({ test, setTest, isLastQuestion, user }) => {
-  const { order, text, options } = test;
-  const { progress, correct } = user;
+  const { order, text, options } = test || {};
+  const { progress, correct } = user || {};
   const [selectedOption, setSelectedOption] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
