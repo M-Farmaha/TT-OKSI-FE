@@ -1,10 +1,10 @@
 # OKSI Solutions FullStack Tech Task Frontend
 
 ### Link to backend repository
-https://github.com/M-Farmaha/TT-OKSI-BE
+https://github.com/M-Farmaha/tt-oksi-be
 
 ### Link to gh-pages
-https://m-farmaha.github.io/TT-OKSI-FE/
+https://m-farmaha.github.io/tt-oksi-fe/auth
 
 Welcome to OKSI Solutions FullStack Tech Task Frontend repository!
 This is an educational repository that uses the following technologies:
