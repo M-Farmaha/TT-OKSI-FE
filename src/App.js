@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import PublicRoute from "./routes/PublicRoute";
@@ -13,6 +13,8 @@ export const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Navigate to="/auth" />} />
+
         <Route
           path="/auth"
           element={
