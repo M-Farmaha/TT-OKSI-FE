@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/tt-oksi-fe">
+        <BrowserRouter basename="/TT-OKSI-FE">
           <App />
         </BrowserRouter>
       </PersistGate>
