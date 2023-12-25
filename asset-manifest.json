@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tt-oksi-fe/static/css/main.eb058d8e.css",
-    "main.js": "/tt-oksi-fe/static/js/main.f5e6ca7d.js",
+    "main.js": "/tt-oksi-fe/static/js/main.592bf9b0.js",
     "static/js/703.3c7f0653.chunk.js": "/tt-oksi-fe/static/js/703.3c7f0653.chunk.js",
     "static/js/272.cb7824ff.chunk.js": "/tt-oksi-fe/static/js/272.cb7824ff.chunk.js",
     "static/js/207.8e3990f0.chunk.js": "/tt-oksi-fe/static/js/207.8e3990f0.chunk.js",
     "static/js/719.f365a5a9.chunk.js": "/tt-oksi-fe/static/js/719.f365a5a9.chunk.js",
     "index.html": "/tt-oksi-fe/index.html",
     "main.eb058d8e.css.map": "/tt-oksi-fe/static/css/main.eb058d8e.css.map",
-    "main.f5e6ca7d.js.map": "/tt-oksi-fe/static/js/main.f5e6ca7d.js.map",
+    "main.592bf9b0.js.map": "/tt-oksi-fe/static/js/main.592bf9b0.js.map",
     "703.3c7f0653.chunk.js.map": "/tt-oksi-fe/static/js/703.3c7f0653.chunk.js.map",
     "272.cb7824ff.chunk.js.map": "/tt-oksi-fe/static/js/272.cb7824ff.chunk.js.map",
     "207.8e3990f0.chunk.js.map": "/tt-oksi-fe/static/js/207.8e3990f0.chunk.js.map",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.eb058d8e.css",
-    "static/js/main.f5e6ca7d.js"
+    "static/js/main.592bf9b0.js"
   ]
 }
