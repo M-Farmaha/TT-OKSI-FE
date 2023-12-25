@@ -85,7 +85,7 @@ export const LoginForm = () => {
 
       {isLoading && (
         <WarningText>
-          The first load may take more time accordint to server's cold start.
+          The first load may take more time according to server's cold start.
           Please wait a little...
         </WarningText>
       )}

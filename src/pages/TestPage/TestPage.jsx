@@ -74,6 +74,7 @@ const TestPage = () => {
             setTest={setTest}
             isLastQuestion={progress === testsLength}
             user={currentUser}
+            testsLength={testsLength}
           />
         )}
       </Container>

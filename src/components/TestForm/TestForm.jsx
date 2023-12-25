@@ -16,7 +16,7 @@ import {
 } from "redux/Api";
 import { ButtonLoader } from "components/Loaders/Loaders";
 
-export const TestForm = ({ test, setTest, isLastQuestion, user }) => {
+export const TestForm = ({ test, setTest, isLastQuestion, user, testsLength }) => {
   const { order, text, options } = test || {};
   const { progress, correct } = user || {};
   const [selectedOption, setSelectedOption] = useState(null);
@@ -63,7 +63,7 @@ export const TestForm = ({ test, setTest, isLastQuestion, user }) => {
   return (
     <>
       <QuestionTitle>
-        {order}. {text}
+        {order}/{testsLength}. {text}
       </QuestionTitle>
 
       <FormContainer>

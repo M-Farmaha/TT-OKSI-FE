@@ -90,16 +90,16 @@ export const SecureButton = styled.button`
 `;
 
 export const WarningText = styled.p`
-  color: var(--primary-color);
+  color: var(--border-input-style);
 
   font-family: Merriweather;
-  font-size: 10px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.43;
 
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
 `;
 
 export const ShowPasswordIcon = styled(AiFillEye)`
