@@ -5,7 +5,7 @@ const AuthPage = () => {
   return (
     <>
       <Container>
-        <Title>Check your English level with 30 questions</Title>
+        <Title>Check your English level with 60 questions</Title>
         <LoginForm />
       </Container>
     </>
