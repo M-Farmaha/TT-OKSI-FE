@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const Api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://english-quiz-frontend.onrender.com",
+    baseUrl: "https://english-quiz-backend.onrender.com",
   }),
   tagTypes: ["User"],
   endpoints: (builder) => ({
