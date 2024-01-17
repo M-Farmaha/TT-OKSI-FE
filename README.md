@@ -1,24 +1,12 @@
-# OKSI Solutions FullStack Tech Task Frontend
+# "English Quiz"
 
 ### Link to backend repository
-https://github.com/M-Farmaha/tt-oksi-be
+https://github.com/M-Farmaha/english-quiz-backend
 
 ### Link to gh-pages
-https://m-farmaha.github.io/tt-oksi-fe/auth
+https://m-farmaha.github.io/english-quiz-frontend/auth
 
-Welcome to OKSI Solutions FullStack Tech Task Frontend repository!
-This is an educational repository that uses the following technologies:
-#### Frontend:
- - **react**
-- **react router dom**
-- **redux / RTK query**
-- **styled components**
-- **responsive markup**
-#### Backend:
-- **node.js**
-- **express**
-- **mongoBD / mongoose**
-- **deploy on render.com**
+Welcome to "English Quiz" Frontend repository!
 
 ## Review
 
@@ -34,6 +22,22 @@ This is an educational repository that uses the following technologies:
 - Error page (for any non-existent route)
 ![ErrorPage](./screenshots/ErrorPage.jpg)
 
+This is a repository that uses the following technologies:
+
+#### Frontend:
+
+- **react**
+- **react router dom**
+- **redux / RTK query**
+- **styled components**
+- **responsive markup**
+
+#### Backend:
+
+- **node.js**
+- **express**
+- **mongoBD / mongoose**
+
 ## How to Contribute
 
 If you wish to make your own fixes or improvements, you should:
@@ -45,7 +49,7 @@ If you wish to make your own fixes or improvements, you should:
 
 ## Author
 
-The "OKSI Solutions FullStack Tech Task" is developed by M-Farmaha in 2023.
+The "English Quiz" is developed by M-Farmaha in 2023.
 
 ## License
 

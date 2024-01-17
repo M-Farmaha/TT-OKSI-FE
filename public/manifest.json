@@ -1,6 +1,6 @@
 {
-  "short_name": "Tech Task",
-  "name": "Zenbit Tech Task",
+  "short_name": "english-quiz",
+  "name": "english-quiz-frontend",
   "icons": [
     {
       "src": "favicon.ico",
