@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/tt-oksi-fe/static/css/main.eb058d8e.css",
-    "main.js": "/tt-oksi-fe/static/js/main.a7ce8c1a.js",
-    "static/js/703.b5d8496d.chunk.js": "/tt-oksi-fe/static/js/703.b5d8496d.chunk.js",
-    "static/js/272.04f17a40.chunk.js": "/tt-oksi-fe/static/js/272.04f17a40.chunk.js",
-    "static/js/207.8e3990f0.chunk.js": "/tt-oksi-fe/static/js/207.8e3990f0.chunk.js",
-    "static/js/719.f365a5a9.chunk.js": "/tt-oksi-fe/static/js/719.f365a5a9.chunk.js",
-    "index.html": "/tt-oksi-fe/index.html",
-    "main.eb058d8e.css.map": "/tt-oksi-fe/static/css/main.eb058d8e.css.map",
-    "main.a7ce8c1a.js.map": "/tt-oksi-fe/static/js/main.a7ce8c1a.js.map",
-    "703.b5d8496d.chunk.js.map": "/tt-oksi-fe/static/js/703.b5d8496d.chunk.js.map",
-    "272.04f17a40.chunk.js.map": "/tt-oksi-fe/static/js/272.04f17a40.chunk.js.map",
-    "207.8e3990f0.chunk.js.map": "/tt-oksi-fe/static/js/207.8e3990f0.chunk.js.map",
-    "719.f365a5a9.chunk.js.map": "/tt-oksi-fe/static/js/719.f365a5a9.chunk.js.map"
+    "main.css": "/english-quiz-frontend/static/css/main.eb058d8e.css",
+    "main.js": "/english-quiz-frontend/static/js/main.edfd76d2.js",
+    "static/js/703.1a212426.chunk.js": "/english-quiz-frontend/static/js/703.1a212426.chunk.js",
+    "static/js/272.afec8c49.chunk.js": "/english-quiz-frontend/static/js/272.afec8c49.chunk.js",
+    "static/js/207.aba17703.chunk.js": "/english-quiz-frontend/static/js/207.aba17703.chunk.js",
+    "static/js/719.b6239a21.chunk.js": "/english-quiz-frontend/static/js/719.b6239a21.chunk.js",
+    "index.html": "/english-quiz-frontend/index.html",
+    "main.eb058d8e.css.map": "/english-quiz-frontend/static/css/main.eb058d8e.css.map",
+    "main.edfd76d2.js.map": "/english-quiz-frontend/static/js/main.edfd76d2.js.map",
+    "703.1a212426.chunk.js.map": "/english-quiz-frontend/static/js/703.1a212426.chunk.js.map",
+    "272.afec8c49.chunk.js.map": "/english-quiz-frontend/static/js/272.afec8c49.chunk.js.map",
+    "207.aba17703.chunk.js.map": "/english-quiz-frontend/static/js/207.aba17703.chunk.js.map",
+    "719.b6239a21.chunk.js.map": "/english-quiz-frontend/static/js/719.b6239a21.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb058d8e.css",
-    "static/js/main.a7ce8c1a.js"
+    "static/js/main.edfd76d2.js"
   ]
 }
