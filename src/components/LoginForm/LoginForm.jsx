@@ -34,7 +34,7 @@ export const LoginForm = () => {
       }).unwrap();
       dispatch(setToken(token));
     } catch (error) {
-      alert(error?.data);
+      alert(error?.data?.message);
     }
     setisLoading(false);
   };
